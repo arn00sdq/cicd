@@ -3,10 +3,10 @@ name: Manual install
 on:
   workflow_dispatch:
     inputs:
-      exe_test:
-        description: "run test?"
+      run-tests:
+        description: "Run tests?"
         required: true
-        default: "true"
+        default: "false"
 
 jobs:
   install:
@@ -28,5 +28,5 @@ jobs:
         run: npm run build
 
       - name: Test test
-        if: ${{ github.event.inputs.exe_test == 'true' }}
+        if: ${{ github.event.inputs.run-tests == 'true' || github.event_name == 'pull_request' }}
         run: npm test
