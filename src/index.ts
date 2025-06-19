@@ -35,4 +35,4 @@ const PORT = 8282;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
   console.log(`Application: http://localhost:${PORT}`);
-});
+}); 
