@@ -1,6 +1,9 @@
 name: Manual install
 
 on:
+  pull_request:
+    types: [opened, reopened]
+
   workflow_dispatch:
     inputs:
       exe_test:
