@@ -28,5 +28,5 @@ jobs:
         run: npm run build
 
       - name: Test test
-        if: ${{ inputs.exe_test == 'false' }}
+        if: ${{ github.event.inputs.exe_test == 'true' }}
         run: npm test
