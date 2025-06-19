@@ -2,7 +2,11 @@ name: Manual install
 
 on:
   workflow_dispatch:
-
+    inputs:
+      exe_test:
+        description: "whether or not exe test"
+        required: false
+        type: boolean
 jobs:
   install:
     runs-on: ubuntu-latest
@@ -23,4 +27,5 @@ jobs:
         run: npm run build
 
       - name: Test test
+        if: ${{ inputs.exe_test == 'false' }}
         run: npm test
