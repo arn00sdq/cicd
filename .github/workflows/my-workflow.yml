@@ -2,7 +2,7 @@ name: Manual install
 
 on:
   pull_request:
-    types: [opened, reopened]
+    types: [opened, synchronize, reopened]
 
   workflow_dispatch:
     inputs:
