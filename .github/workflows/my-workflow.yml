@@ -21,3 +21,6 @@ jobs:
 
       - name: Test crash
         run: npm run build
+
+      - name: Test test
+        run: npm test
