@@ -29,10 +29,10 @@ app.get("/divide/:a/:b", (request: Request, response: Response) => {
   const b = parseInt(request.params.b);
   const result = ComputeUtil.divide(a, b);
   response.json(result);
-});
+}); 
 
 const PORT = 8282;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
   console.log(`Application: http://localhost:${PORT}`);
-});
+}); 
