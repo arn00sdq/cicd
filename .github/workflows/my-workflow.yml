@@ -4,9 +4,10 @@ on:
   workflow_dispatch:
     inputs:
       exe_test:
-        description: "whether or not exe test"
-        required: false
-        type: boolean
+        description: "run test?"
+        required: true
+        default: "false"
+
 jobs:
   install:
     runs-on: ubuntu-latest
